@@ -1,0 +1,16 @@
+{
+  "name": "aglide-session-revocation-harness",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Dependency-free proof of revocation-aware browser agent execution for legacy non-SSO applications",
+  "scripts": {
+    "demo": "node examples/demo.mjs",
+    "test": "node --test test/*.test.mjs",
+    "check": "npm test && npm run demo"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT"
+}
