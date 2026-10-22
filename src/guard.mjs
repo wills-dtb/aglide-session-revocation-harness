@@ -42,7 +42,7 @@ export class AgentSessionGuard {
     }
     const attempts = spec.kind === 'read' ? this.maxReadRetries + 1 : 1;
     for (let attempt = 1; attempt <= attempts; attempt++) {
-      // Check identity before every attempt, including retries.
+      // Live check before EVERY attempt: a revoked identity must not keep using a live legacy cookie.
       try { this.identity.assertActive(this.token); }
       catch (err) {
         this.audit.append({ action, outcome: 'denied', reason: 'IDENTITY_REVOKED', attempt });

@@ -9,8 +9,6 @@
     "test": "node --test test/*.test.mjs",
     "check": "npm test && npm run demo"
   },
-  "engines": {
-    "node": ">=20"
-  },
+  "engines": {"node": ">=20"},
   "license": "MIT"
 }
